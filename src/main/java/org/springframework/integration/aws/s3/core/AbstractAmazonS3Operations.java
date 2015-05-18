@@ -308,8 +308,7 @@ public abstract class AbstractAmazonS3Operations implements AmazonS3Operations, 
 
 		String stringContentMD5 = null;
 		try {
-			stringContentMD5 =
-					AWSCommonUtils.encodeHex(AWSCommonUtils.getContentsMD5AsBytes(file));
+			stringContentMD5 = AWSCommonUtils.encodeBase64(AWSCommonUtils.getContentsMD5AsBytes(file));
 		}
 		catch (UnsupportedEncodingException e) {
 			logger.error("Exception while generating the content's MD5 of the file " + file.getAbsolutePath(), e);

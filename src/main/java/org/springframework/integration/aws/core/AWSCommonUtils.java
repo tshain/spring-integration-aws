@@ -104,4 +104,14 @@ public class AWSCommonUtils {
 	public static byte[] decodeBase64(byte[] rawBytes) throws UnsupportedEncodingException {
 		return Base64.decodeBase64(rawBytes);
 	}
+	
+	/**
+	 * Encodes raw bytes into base 64 string
+	 *
+	 * @param base64
+	 */
+	public static String encodeBase64(byte[] base64) throws UnsupportedEncodingException {
+		return new String(Base64.encodeBase64(base64));
+	}
+
 }
